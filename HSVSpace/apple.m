@@ -1,0 +1,17 @@
+I=imread('fruit.jpg');
+figure,imshow(I);
+title('Ô­Ê¼Í¼Ïñ');
+HSVimg=rgb2hsv(I);
+figure,imshow(HSVimg);
+title('HSVpicture');
+figure,imhist(HSVimg);
+title('HSVhist');
+H=HSVimg(:,:,1);
+S=HSVimg(:,:,2);
+V=HSVimg(:,:,3);
+figure,subplot(2,3,1),imshow(H);title('H');
+subplot(2,3,2),imshow(S);title('S');
+subplot(2,3,3),imshow(V);title('V');
+subplot(2,3,4),imhist(H);
+subplot(2,3,5),imhist(S);
+subplot(2,3,6),imhist(V);

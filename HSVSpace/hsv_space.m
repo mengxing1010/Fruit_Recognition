@@ -1,0 +1,35 @@
+I=imread('apples.jpg');
+J=imread('fruit.jpg');
+K=imread('ningmeng.jpg');
+apples_HSV=rgb2hsv(I);
+apples_H=apples_HSV(:,:,1);
+apples_S=apples_HSV(:,:,2);
+apples_V=apples_HSV(:,:,3);
+
+fruit_HSV=rgb2hsv(J);
+fruit_H=fruit_HSV(:,:,1);
+fruit_S=fruit_HSV(:,:,2);
+fruit_V=fruit_HSV(:,:,3);
+
+ningmeng_HSV=rgb2hsv(K);
+ningmeng_H=ningmeng_HSV(:,:,1);
+ningmeng_S=ningmeng_HSV(:,:,2);
+ningmeng_V=ningmeng_HSV(:,:,3);
+subplot(3,3,1),imhist(apples_H);title('苹果H通道');
+xlabel({' ','像素级'});ylabel('像素出现次数');
+subplot(3,3,2),imhist(apples_S);title('苹果S通道');
+xlabel({' ','像素级'});ylabel('像素出现次数');
+subplot(3,3,3),imhist(apples_V);title('苹果V通道');
+xlabel({' ','像素级'});ylabel('像素出现次数');
+subplot(3,3,4),imhist(fruit_H);title('草莓H通道');
+xlabel({' ','像素级'});ylabel('像素出现次数');
+subplot(3,3,5),imhist(fruit_S);title('草莓S通道');
+xlabel({' ','像素级'});ylabel('像素出现次数');
+subplot(3,3,6),imhist(fruit_V);title('草莓V通道');
+xlabel({' ','像素级'});ylabel('像素出现次数');
+subplot(3,3,7),imhist(ningmeng_H);title('柠檬H通道');
+xlabel({' ','像素级'});ylabel('像素出现次数');
+subplot(3,3,8),imhist(ningmeng_S);title('柠檬S通道');
+xlabel({' ','像素级'});ylabel('像素出现次数');
+subplot(3,3,9),imhist(ningmeng_V);title('柠檬V通道');
+xlabel({' ','像素级'});ylabel('像素出现次数');
